@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import webbrowser, requests
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 #https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
 
 app = Flask(__name__)
