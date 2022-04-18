@@ -27,7 +27,7 @@ def create_table():
 def insertRow():
     conn = sqlite3.connect('customer.db')
     c = conn.cursor()
-    c.execute("INSERT INTO customers VALUES ('Tim', 'Doe', 'tim@doe.com')")
+    c.execute("INSERT INTO customers VALUES ('Terry', 'Tam', 'terry@tam.com')")
     conn.commit()
     print("Row added...")
     conn.close()
@@ -70,3 +70,7 @@ def updateDatabase():
     conn.commit()
     conn.close()
 
+
+
+
+insertRow()

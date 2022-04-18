@@ -1,7 +1,8 @@
 from flask import Flask, jsonify, request
 import webbrowser, requests
+app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-#https://auth0.com/blog/developing-restful-apis-with-python-and-flask/
+
 
 app = Flask(__name__)
 
@@ -30,10 +31,11 @@ def get_weather():
 #   "description": "Boston",
 #   "amount": 35.0
 # }' http://localhost:5000/weather
-# @app.route('/weather', methods=['POST'])
+@app.route('/weather', methods=['POST'])
 def add_weather():
   incomes.append(request.get_json())
   return '', 204
+
 
 # get weather data from OpenWeather
 @app.route('/getWeather')
@@ -46,4 +48,7 @@ def call_weather():
 if __name__ == "__main__":
     webbrowser.open_new('http://127.0.0.1:5000/')
     app.run(port=5000)
+
+
+
 

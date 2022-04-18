@@ -10,7 +10,9 @@ app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 def hello_world():
   return "Hello, World!"
 
-
+@app.route("/terry")
+def hello_world2():
+  return "goodbye!"
     
 
 if __name__ == "__main__":
